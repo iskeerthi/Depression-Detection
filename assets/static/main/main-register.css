@@ -1,0 +1,68 @@
+form{
+    background-color: transparents;
+    margin-bottom: 0px;
+    margin-top:60px;
+    box-shadow: 1px 0px 8px 0px rgba(48, 70, 70, 0.9);
+}
+.container11{
+    align-items: center !important;
+    text-align: center !important;
+}
+.input-field{
+    width: 200px !important;
+}
+/*label{
+    text-align: start;
+    align-items: flex-start;
+}*/
+.input-group-addon {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px 0 0 3px;
+    padding: 6px 12px;
+  }
+  
+  .input-group-addon i {
+    font-size: 16px;
+  }
+  
+.happy-image{
+    width: 700px;
+    height: 700px;
+    margin-top: 31px;
+}
+.main-container{
+    display: flex;
+}
+.h1{
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.para{
+    font-size: 11px;
+    color: red;
+}
+
+.button{
+    width: 140px;
+    height: 40px;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 30px;
+}
+.btn-d{
+    justify-content: center;
+    text-align: center;
+}
+
+.name1{
+    margin-left: 50px;
+}
+.number1{
+    margin-left: 200px;
+}

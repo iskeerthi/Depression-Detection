@@ -1,0 +1,250 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Depression Detection</title>
+        <link rel="icon" href="{% static 'main/img/favicon.png' %}">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+        <!-- animate CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/animate.css' %}">
+        <!-- owl carousel CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+        <!-- themify CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/themify-icons.css' %}">
+        <!-- flaticon CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/flaticon.css' %}">
+        <!-- magnific popup CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/magnific-popup.css' %}">
+        <!-- nice select CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/nice-select.css' %}">
+        <!-- swiper CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/slick.css' %}">
+        <!-- style CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+        {% comment %} Sweetalert {% endcomment %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+
+    <body>
+        <!--::header part start::-->
+        <header class="main_menu home_menu bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="{% url 'home' %}"> <img src="{% static 'main/img/2473087.png' %}" alt="logo" style='width:40px; font-family:Times New Roman, Times, serif !important'> Depression Detection</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                                id="navbarSupportedContent">
+                                <ul class="navbar-nav align-items-center">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{% url 'home' %}" style="font-size:17px; text-decoration:underline;">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'login' %}" style="font-size:17px;">User</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'admin' %}" style="font-size:17px;">Admin</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'about' %}" style="font-size:17px;">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'contact' %}" style="font-size:17px;">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header part end-->
+
+        <!-- banner part start-->
+        <section class="banner_part">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-xl-5">
+                        <div class="banner_text">
+                            <div class="banner_text_iner">
+                                {% comment %} <h5>We are here for your care</h5> {% endcomment %}
+                                <h1>Depression Detection</h1>
+                                <p>Facial recognition is the process of identifying or
+                                     verifying a person's identity using their face.
+                                      It captures, analyzes, and compares patterns based on the person's facial details.
+                                      A facial recognition system is a technology potentially capable of matching a human face 
+                                      from a digital image or a video frame against a database of faces. </p>
+                                <a href="#" class="btn_2">Do test Detection</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="banner_img">
+                            <img src="{% static 'main/img/2462340.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner part start-->
+
+        <!-- about us part start-->
+        <section class="about_us padding_top">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-6 col-lg-6">
+                        <div class="about_us_img">
+                            <img src="{% static 'main/img/portrait-man-face-scann.jpg' %}" alt="homeimage">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5">
+                        <div class="about_us_text">
+                            <h2>About us</h2>
+                            <p>We used AWS S3 service to store our dataset,
+                                and Amazon Sagemaker to perform an analysis.
+                                For the given dataset we applied three classification models:
+                                Logistic Regression Model, K-nearest Neighbors and Support Vector Machines.
+                                For each of the models we also performed a performance measurement.
+                                We also compared all the results we got and according to the results,
+                                Support Vector Machines has the best performance.
+                                Insights and recommendations are provided.</p>
+                            <a class="btn_2 " href="#">learn more</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about us part end-->
+<br><br><br><br>
+       
+
+    
+
+        
+
+        <!-- footer part start-->
+        <footer class="footer-area">
+            <div class="footer section_padding">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-6 col-md-4 col-sm-6 single-footer-widget">
+                            <h2>Address</h2>
+                            <p style="color: black; font-size: 16px; font-weight: 400;">
+                                #16-1-486, Saidabad Rd, DBR Enclave, Sapota Bagh, New Malakpet, Hyderabad, Telangana 500059
+                            </p>
+                            
+                            <div class="social_logo">
+                                <a href="#"><i class="ti-facebook"></i></a>
+                                <a href="#"> <i class="ti-twitter"></i> </a>
+                                <a href="#"><i class="ti-instagram"></i></a>
+                                <a href="#"><i class="ti-skype"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-md-4 single-footer-widget">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'login' %}">User</a></li>
+                                <li><a href="{% url 'admin' %}">Admin</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright_part">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved   <i class="ti-heart" style="color:red;" aria-hidden="true"></i> by <a href="https://matrusri.edu.in/" target="_blank">Matrusri</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                        <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"> <i class="ti-twitter"></i> </a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                            <a href="#"><i class="ti-skype"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- footer part end-->
+
+        <!-- jquery plugins here-->
+
+        <script src="{% static 'main/js/jquery.min.js' %}"></script>
+        <!-- popper js -->
+        <script src="{% static 'main/js/popper.min.js' %}"></script>
+        <!-- bootstrap js -->
+        <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+        <!-- owl carousel js -->
+        <script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'main/js/jquery.nice-select.min.js' %}"></script>
+        <!-- contact js -->
+        <script src="{% static 'main/js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'main/js/jquery.form.js' %}"></script>
+        <script src="{% static 'main/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'main/js/mail-script.js' %}"></script>
+        <script src="{% static 'main/js/contact.js' %}"></script>
+        <!-- custom js -->
+        <script src="{% static 'main/js/custom.js' %}"></script>
+
+        {% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <script>swal({
+                        title: "Success!",
+                        text: "{{message}}",
+                        icon: "success",
+                        button: "OK",
+                    });
+                </script>
+            
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                <script>swal({
+                        title: "Warning :)",
+                        text: "{{message}}",
+                        icon: "warning",
+                        button: "OK",
+                    
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                <script>swal({
+                        title: "info :)",
+                        text: "{{message}}",
+                        icon: "info",
+                        button: "OK",
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <script>swal({
+                        title: "error :)",
+                        text: "{{message}}",
+                        icon: "error",
+                        button: "OK",
+                    });
+                </script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </body>
+
+</html>

@@ -1,0 +1,248 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>medical</title>
+    <link rel="icon" href="{% static 'main/img/favicon.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/themify-icons.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/flaticon.css' %}">
+    <!-- magnific popup CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/magnific-popup.css' %}">
+    <!-- nice select CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/nice-select.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/slick.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <!-- fontawesom-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css">
+    {% comment %} Sweetalert {% endcomment %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--navbar-->
+        
+        <link rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+            crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" 
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+            crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+            crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!---nabvar-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!--::header part start::-->
+        <header class="main_menu home_menu bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="{% url 'home' %}"> <img src="{% static 'main/img/2473087.png' %}" alt="logo" style='width:40px; font-family:Times New Roman, Times, serif !important'> Depression Detection</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                                id="navbarSupportedContent">
+                                <ul class="navbar-nav align-items-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'userdashboard' %}" style="font-size:17px; text-decoration:underline;">My Dashboard</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'profile' %}" style="font-size:17px;">My Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'depchatbot' %}" style="font-size:17px;">Depression ChatBot</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'depfacial' %}" style="font-size:17px;">Depression Facial</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'feedback' %}" style="font-size:17px;">Feedback</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'userlogout' %}" style="font-size:17px;">Logout</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header part end-->
+        <div class="d-flex justify-content-evenly mb-5" style="margin-top: 120px;">
+            <div class="col-3 card mr- ml-5 d-flex flex-column  card-container" style="box-shadow: 1px 0px 8px 0px rgb(40, 41, 41); background-color:rgb(229, 240, 243);">
+                <div class="card-body align-items-center div">
+                    <h4 class="card-title text-primary">No.of times Login<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-in-right ml-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                      </svg></h4>
+                    <p class="card-text text-dark mt-4" style='color:orange !important; font-size:24px;'>{{la.No_Of_Times_Login}}</p>
+                </div>
+            </div>   
+            <div class="col-3 card mr-3 d-flex flex-column justify-content-start card-container" style="box-shadow: 1px 0px 8px 0px rgb(40, 41, 41); background-color:rgb(229, 240, 243);">
+                <div class="card-body align-items-center div">
+                    <h4 class="card-title text-primary">Last Login &#x23F1;</h4>
+                    <p class="card-text text-dark mt-4" style='color:green !important; font-size:20px;'>{{la.Last_Login_Date}} {{la.Last_Login_Time}} </p>
+                </div>
+            </div> 
+            {% comment %} <div class="col-3 card mr-5 d-flex flex-column justify-content-start card-container" style="box-shadow: 1px 0px 8px 0px rgb(40, 41, 41); background-color:rgb(229, 240, 243);">
+                <div class="card-body align-items-center div">
+                    <h4 class="card-title text-primary">No.of Predictions<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bar-chart-steps ml-2" viewBox="0 0 16 16">
+                        <path d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0zM2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1z"/>
+                      </svg></h4>
+                    <p class="card-text text-dark mt-4" style='color:gray !important;font-size:24px;'>2</p>
+                </div>
+            </div>       {% endcomment %}
+        </div>
+        <!-- footer part start-->
+        <footer class="footer-area">
+            <div class="footer section_padding">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-6 col-md-4 col-sm-6 single-footer-widget">
+                            <h2>Address</h2>
+                            <p style="color: black; font-size: 16px; font-weight: 400;">
+                                #16-1-486, Saidabad Rd, DBR Enclave, Sapota Bagh, New Malakpet, Hyderabad, Telangana 500059
+                            </p>
+                            
+                            <div class="social_logo">
+                                <a href="#"><i class="ti-facebook"></i></a>
+                                <a href="#"> <i class="ti-twitter"></i> </a>
+                                <a href="#"><i class="ti-instagram"></i></a>
+                                <a href="#"><i class="ti-skype"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-md-4 single-footer-widget">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'login' %}">User</a></li>
+                                <li><a href="{% url 'admin' %}">Admin</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="copyright_part">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="ti-heart" style="color:red;" aria-hidden="true"></i> by <a href="https://matrusri.edu.in/" target="_blank">Matrusri</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                        <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"> <i class="ti-twitter"></i> </a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                            <a href="#"><i class="ti-skype"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </footer>
+        
+        <!-- footer part end-->
+        
+        <!-- jquery plugins here-->
+        
+        <script src="{% static 'main/js/jquery-1.12.1.min.js' %}"></script>
+        <!-- popper js -->
+        <script src="{% static 'main/js/popper.min.js' %}"></script>
+        <!-- bootstrap js -->
+        <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+        <!-- owl carousel js -->
+        <script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'main/js/jquery.nice-select.min.js' %}"></script>
+        <!-- contact js -->
+        <script src="{% static 'main/js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'main/js/jquery.form.js' %}"></script>
+        <script src="{% static 'main/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'main/js/mail-script.js' %}"></script>
+        <script src="{% static 'main/js/contact.js' %}"></script>
+        <!-- custom js -->
+        <script src="{% static 'main/js/custom.js' %}"></script>
+        
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                    <script>swal({
+                            title: "Success!",
+                            text: "{{message}}",
+                            icon: "success",
+                            button: "OK",
+                        });
+                    </script>
+                
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                    <script>swal({
+                            title: "Warning :)",
+                            text: "{{message}}",
+                            icon: "warning",
+                            button: "OK",
+                        
+                        });
+                    </script>
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                    <script>swal({
+                            title: "info :)",
+                            text: "{{message}}",
+                            icon: "info",
+                            button: "OK",
+                        });
+                    </script>
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                    <script>swal({
+                            title: "error :)",
+                            text: "{{message}}",
+                            icon: "error",
+                            button: "OK",
+                        });
+                    </script>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+    </body>
+
+</html>

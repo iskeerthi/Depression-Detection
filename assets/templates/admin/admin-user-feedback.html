@@ -1,0 +1,529 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document </title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="description" content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+      <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+      <meta name="author" content="codedthemes" />
+      <!-- Favicon icon -->
+      <link rel="icon" href="{% static 'main/img/favicon.png' %}">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    {% comment %} Sweetalert {% endcomment %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- waves.css -->
+    <link rel="stylesheet" href="{% static 'admin/pages/waves/css/waves.min.css' %}" type="text/css" media="all">
+      <!-- Required Fremwork -->
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/css/bootstrap/css/bootstrap.min.css' %}">
+      <!-- waves.css -->
+      <link rel="stylesheet" href="{% static 'admin/pages/waves/css/waves.min.css" type="text/css' %}" media="all">
+      <!-- themify icon -->
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/icon/themify-icons/themify-icons.css' %}">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/icon/font-awesome/css/font-awesome.min.css' %}">
+      <!-- scrollbar.css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/css/jquery.mCustomScrollbar.css' %}">
+        <!-- am chart export.css -->
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+      <!-- Style.css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/css/style.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src = "{% static 'admin/admin.js' %}"></script>
+
+        {% comment %} delete {% endcomment %}
+        <style>
+            #overlay {
+                position: fixed;
+                display: none;
+                width: 50rem;
+                height: 18rem;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                
+            }
+            .ag-format-container {
+                width: 1142px;
+                margin: 0 auto;
+              }
+              
+              /* 
+              body {
+                background-color: #000;
+              } */
+              .ag-courses_box {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+              
+                padding: 50px 0;
+              }
+              .ag-courses_item {
+                -ms-flex-preferred-size: calc(33.33333% - 30px);
+                flex-basis: calc(33.33333% - 30px);
+              
+                margin: 0 15px 30px;
+              
+                overflow: hidden;
+              
+                border-radius: 28px;
+              }
+              .ag-courses-item_link {
+                display: block;
+                padding: 30px 20px;
+                background-color: #121212;
+              
+                overflow: hidden;
+              
+                position: relative;
+              }
+              .ag-courses-item_link:hover,
+              .ag-courses-item_link:hover .ag-courses-item_date {
+                text-decoration: none;
+                color: #FFF;
+              }
+              .ag-courses-item_link:hover .ag-courses-item_bg {
+                -webkit-transform: scale(10);
+                -ms-transform: scale(10);
+                transform: scale(10);
+              }
+              .ag-courses-item_title {
+                min-height: 87px;
+                margin: 0 0 25px;
+              
+                overflow: hidden;
+              
+                font-weight: bold;
+                font-size: 30px;
+                color: #FFF;
+              
+                z-index: 2;
+                position: relative;
+              }
+              .ag-courses-item_date-box {
+                font-size: 18px;
+                color: #FFF;
+              
+                z-index: 2;
+                position: relative;
+              }
+              .ag-courses-item_date {
+                font-weight: bold;
+                color: #f9b234;
+              
+                -webkit-transition: color .5s ease;
+                -o-transition: color .5s ease;
+                transition: color .5s ease
+              }
+              .ag-courses-item_bg {
+                height: 10rem;
+                width: 10rem;
+                background-color: #9ce4ac;
+              
+                z-index: 1;
+                position: absolute;
+                top: -75px;
+                right: -75px;
+              
+                border-radius: 50%;
+              
+                -webkit-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                transition: all .5s ease;
+              }
+              .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+                background-color: #96e7a8;
+              }
+
+              
+              @media only screen and (max-width: 979px) {
+                .ag-courses_item {
+                  -ms-flex-preferred-size: calc(50% - 30px);
+                  flex-basis: calc(50% - 30px);
+                }
+                .ag-courses-item_title {
+                  font-size: 24px;
+                }
+              }
+              
+              @media only screen and (max-width: 767px) {
+                .ag-format-container {
+                  width: 96%;
+                }
+              
+              }
+              @media only screen and (max-width: 639px) {
+                .ag-courses_item {
+                  -ms-flex-preferred-size: 100%;
+                  flex-basis: 100%;
+                }
+                .ag-courses-item_title {
+                  min-height: 72px;
+                  line-height: 1;
+              
+                  font-size: 24px;
+                }
+                .ag-courses-item_link {
+                  padding: 22px 40px;
+                }
+                .ag-courses-item_date-box {
+                  font-size: 16px;
+                }
+              }
+        </style>
+  </head>
+
+  <body>
+  <!-- Pre-loader start -->
+  <div class="theme-loader">
+      <div class="loader-track">
+          <div class="preloader-wrapper">
+              <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+              <div class="spinner-layer spinner-red">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-yellow">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-green">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Pre-loader end -->
+  <div id="pcoded" class="pcoded">
+      <div class="pcoded-overlay-box"></div>
+      <div class="pcoded-container navbar-wrapper">
+        <nav class="navbar header-navbar pcoded-header">
+            <div class="navbar-wrapper">
+                <div class="navbar-logo">
+                  <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                      <i class="ti-menu"></i>
+                  </a> 
+                    <a href="admin-dashboard.html">
+                        <img class="img-fluid" src="{% static 'admin/images/deprechecklog.png' %}" style="width:200px;" />
+                    </a>
+                </div>
+                <a href="{% url 'adminlogout' %}"><button class="btn btn-muted d-flex ml-auto mt-3 mr-4" style="border-radius: 5px;"><i class="fa fa-sign-out" style='color:black; font-size:1.2rem'></i>Logout</button></a>
+                <div class="navbar-container container-fluid">
+                    <ul class="nav-left">
+                        <li>
+                            <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                        </li>
+                        <li class="header-search">
+                            <div class="main-search morphsearch-search">
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+          <div class="pcoded-main-container">
+              <div class="pcoded-wrapper">
+                <nav class="pcoded-navbar">
+                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                    <div class="pcoded-inner-navbar main-menu">
+                        <div class="">
+                            <div class="d-flex main-menu-header" style="height:8.1rem;">
+                              <h3 class="mt-5 text-white" style="color:white; margin-left:4.1rem;">Admin</h3>
+                            </div>
+                        </div>
+                        <div class="pcoded-navigation-label" data-i18n="nav.category.navigation"></div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li >
+                                <a href="{% url 'admindashboard' %}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                                  <div class="d-flex">
+                                    <i class="fa fa-users mr-2" style="color:orange;"></i>
+                                    <span class="menu-title" style="font-size: 14.5px;color:;">User Management </span>
+                                    <i class="fa fa-plus" style="margin-left: 2.3rem;"></i>
+                                  </div>
+                                </a>
+                                <div class="collapse" id="ui-basic">
+                                    <ul class="nav flex-column sub-menu">
+                                            <li class="nav-item"> <a class="nav-link ml-5 "style="font-size: 14.2px;" href="{% url 'pendingusers' %}">Pending Users</a></li>
+                                        <li class="nav-item"> <a class="nav-link ml-5 text-primary"style="font-size: 14.2px;" href="{% url 'allusers' %}">All Users</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                                  <div class="d-flex">
+                                  <i class="fa fa-heart mr-2" style="color:red;"></i>
+                                  <span class="menu-title" style="font-size: 15px;"> Dataset</span>
+                                  <i class="fa fa-plus" style="margin-left:110px"></i>
+                              </div>
+                                </a>
+                                <div class="collapse" id="form-elements">
+                                    <ul class="nav flex-column sub-menu">
+                                        <li class="nav-item"><a class="nav-link ml-5" style="font-size: 14.2px;" href="{% url 'uploaddataset' %}">Upload Dataset</a></li>
+                                        <li class="nav-item"><a class="nav-link ml-5" style="font-size: 14.2px;" href="{% url 'viewdataset' %}">View Datasset</a></li>                                  
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" data-toggle="collapse" href="#form-element" aria-expanded="false" aria-controls="form-element">
+                                  <div class="d-flex">
+                                  <i class="fa fa-tags mr-2" style="color:darkgreen;"></i>
+                                  <span class="menu-title" style="font-size: 15px;">Algorithms</span>
+                                  <i class="fa fa-plus" style="margin-left: 87.5px;"></i>
+                              </div>
+                                </a>
+                                <div class="collapse" id="form-element">
+                                    <ul class="nav flex-column sub-menu">
+                                        <li class="nav-item"><a class="nav-link ml-5" style="font-size: 14.2px;" href="{% url 'anmalgm' %}">Run Logistic Regression</a></li>
+                                        <li class="nav-item"><a class="nav-link ml-5" style="font-size: 14.2px;" href="{% url 'xgbalgm' %}"> Run Naive Bayes</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" data-toggle="collapse" href="#form-elemen" aria-expanded="false" aria-controls="form-elemen">
+                                  <div class="d-flex">
+                                    <i class="fa fa-bar-chart-o  column mr-2" style="color:blue;"></i>
+                                  <span class="menu-title" style="font-size: 14px;">Graph Analysis</span>
+                                  <i class="fa fa-plus" style="margin-left: 67px;"></i>
+                              </div>
+                                </a>
+                                <div class="collapse" id="form-elemen">
+                                    <ul class="nav flex-column sub-menu">
+                                        <li class="nav-item"><a class="nav-link ml-5" style="font-size: 14.2px;" href="{% url 'cgraph' %}" >Comparison Graph</a></li>                                    
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" data-toggle="collapse" href="#form-el" aria-expanded="false" aria-controls="form-el">
+                                  <div class="d-flex">
+                                  <i class="fa fa-star  column mr-2" style="color:brown;"></i>
+                                  <span class="menu-title text-primary" style="font-size: 14px;">Feedback Analysis</span>
+                                  <i class="fa fa-plus" style="margin-left: 66.5px;"></i>
+                              </div>
+                                </a>
+                                <div class="" id="form-el">
+                                    <ul class="nav flex-column sub-menu">
+                                        <li class="nav-item"><a class="nav-link ml-5 text-primary" style="font-size: 14.2px;" href="{% url 'usersfeedback' %}" >Users Feedback</a></li>                                    
+                                    </ul>
+                                </div>
+                            </li>
+                          </ul>
+                    </div>
+                </nav>
+                  <div class="pcoded-content">
+                      <!-- Page-header start -->
+                      <div class="page-header">
+                          <div class="page-block">
+                              <div class="row align-items-center">
+                                  <div class="col-md-12">
+                                      <div class="page-header-title d-flex justify-content-between">
+                                          <h5 class="m-b-10"> Users Feedback</h5>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Page-header end -->
+                      <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-12 tablebg">
+                                <div class="card text-center">
+                                    <div class="table-responsive pt-3">
+                                        <table class="table table-striped project-orders-table">
+                                            <thead>
+                                                <tr class='' style = ''>
+                                                    <th style="text-align:center; font-weight:bold;">S.No</th>
+                                                    {% comment %} <th style="text-align:center; font-weight:bold;">User Profile</th> {% endcomment %}
+                                                    <th style="text-align:center; font-weight:bold;">Name</th>
+                                                    <th style="text-align:center; font-weight:bold;">Email<i class="text-danger fa fa-envelope ml-1"></i></th>
+                                                    <th style="text-align:center; font-weight:bold;">Rating ⭐</th>
+                                                    <th style="text-align:center; font-weight:bold;">Review <i class="text-info fa fa-message ml-1"></i></th>
+                                                    <th style="text-align:center; font-weight:bold;">Sentiment <i class="text-success fa fa-face-smile ml-1"></i></th>
+                                                    {% comment %} <th style="text-align:center; font-weight:bold;">Action</th> {% endcomment %}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for i in feed %}
+                                                    <tr>
+                                                        <td>{{forloop.counter}}</td>
+                                                        {% comment %} <td>{{i.Reviewer.Image}}</td> {% endcomment %}
+                                                        <td>{{i.Reviewer.Full_name}}</td>
+                                                        <td>{{i.Reviewer.Email}}</td>
+                                                        <td>{{i.Rating}}</td>
+                                                        <td>{{i.Review}}</td>
+                                                        {% if i.Sentiment == "Very Positive" %}
+                                                            <td class="text-success badge">Very Positive</td>
+                                                        {% elif i.Sentiment == "Positive" %}
+                                                            <td class="text-info badge">Positive</td>
+                                                        {% elif i.Sentiment == "Neutral" %}
+                                                            <td class="text-secondary badge">Netural</td>
+                                                        {% elif i.Sentiment == "Negative" %}
+                                                            <td class="text-warning badge">Negative</td>
+                                                        {% else %}
+                                                            <td class="text-danger badge"> Very Negative</td>
+                                                        {% endif %}
+                                                    </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        {% comment %} Pagination start {% endcomment %}
+                                            <nav aria-label="Page navigation example ">
+                                                <ul class="pagination ml-2">
+                                                    {% if user.has_previous %}
+                                                        <!-- <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a></li> -->
+                                                        <li class="page-item"><a class="page-link bg-info text-white" href="?page={{ user.previous_page_number }}">Previous</a></li>
+                                                    {% endif %}
+                                                    {% if user.has_next %}
+                                                    <li class="page-item"><a class="page-link bg-info text-white" href="?page={{ user.next_page_number }}">Next</a></li>
+                                                    <!-- <li class="page-item"><a class="page-link" href="?page={{ r.paginator.num_pages }}">Last &raquo;</a></li> -->
+                                                    {% endif %}
+                                                </ul>
+                                                Page {{ user.number }} of {{ user.paginator.num_pages }}.
+                                            </nav>
+                                        {% comment %} Pagination End {% endcomment %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+            
+
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="{% static 'admin/js/jquery/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/jquery-ui/jquery-ui.min.js' %} "></script>
+    <script type="text/javascript" src="{% static 'admin/js/popper.js/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/bootstrap/js/bootstrap.min.js' %} "></script>
+    <script type="text/javascript" src="{% static 'admin/pages/widget/excanvas.js' %} "></script>
+    <!-- waves js -->
+    <script src="{% static 'admin/pages/waves/js/waves.min.js' %}"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="{% static 'admin/js/jquery-slimscroll/jquery.slimscroll.js' %} "></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="{% static 'admin/js/modernizr/modernizr.js' %} "></script>
+    <!-- slimscroll js -->
+    <script type="text/javascript" src="{% static 'admin/js/SmoothScroll.js' %}"></script>
+    <script src="{% static 'admin/js/jquery.mCustomScrollbar.concat.min.js' %} "></script>
+    <!-- Chart js -->
+    <script type="text/javascript" src="{% static 'admin/js/chart.js/Chart.js' %}"></script>
+    <!-- amchart js -->
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="{% static 'admin/pages/widget/amchart/gauge.js' %}"></script>
+    <script src="{% static 'admin/pages/widget/amchart/serial.js' %}"></script>
+    <script src="{% static 'admin/pages/widget/amchart/light.js' %}"></script>
+    <script src="{% static 'admin/pages/widget/amchart/pie.min.js' %}"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <!-- menu js -->
+    <script src="{% static 'admin/js/pcoded.min.js' %}"></script>
+    <script src="{% static 'admin/js/vertical-layout.min.js' %} "></script>
+    <!-- custom js --> 
+    <script type="text/javascript" src="{% static 'admin/pages/dashboard/custom-dashboard.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/script.js' %} "></script>
+    
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <script>swal({
+                        title: "Success!",
+                        text: "{{message}}",
+                        icon: "success",
+                        button: "OK",
+                    });
+                </script>
+            
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                <script>swal({
+                        title: "Warning :)",
+                        text: "{{message}}",
+                        icon: "warning",
+                        button: "OK",
+                    
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                <script>swal({
+                        title: "info :)",
+                        text: "{{message}}",
+                        icon: "info",
+                        button: "OK",
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <script>swal({
+                        title: "error :)",
+                        text: "{{message}}",
+                        icon: "error",
+                        button: "OK",
+                    });
+                </script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</body>
+
+</html>

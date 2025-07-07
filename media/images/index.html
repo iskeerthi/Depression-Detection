@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Document</title>
+    <!--navbar-->
+        <link rel="stylesheet" href="{% static 'learn/navbar.css' %}">
+        <link rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+            crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" 
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+            crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+            crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!---nabvar-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+    <body>
+        <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .input-icons i {
+            position: absolute;
+        }
+          
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+          
+        .icon {
+            padding: 42px;
+            min-width: 40px;
+            margin-left: 8rem;
+        }
+          .icon1{
+            padding:px;
+            min-width: 40px;
+            margin-left: 18.5rem;
+          }
+        
+    </style>
+</head>
+  <script>
+    function errorMessage() {
+        var error = document.getElementById("error")
+        if ((document.getElementById("fname").value==''))
+        {
+             
+            // Changing content and color of content
+            error.textContent = "Please enter a valid number"
+            error.style.color = "red"
+        } else {
+            error.textContent = ""
+        }
+    }
+</script>
+<body>
+   
+        <div class="container" style="height:100vh;">
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <div class="col-5 mr-5 my-5 " style="margin-left:-11rem;">
+                        <img src="WhatsApp Image 2023-02-25 at 10.40.23.jpg" style="width:450px;"/>
+                    </div>
+                    <div class="col-7 my-5">
+                        <form name = 'myForm' onsubmit="return submitForm();" style="font-family:lato bold">
+                            <h1 style="color:#4c3e79; font-family:lato regular;">Create an account</h1>
+                            <div class="d-flex my-4">
+                                <div class="col-5">
+                                    <label style="font-weight: bold;">First Name</label>
+                                    <input id = 'fname' class="form-control" type="text" placeholder="First Name">
+                                    <p id = 'error' style="color: red;"></p>
+                                </div>
+                                <div class="col-5">
+                                    <label style="font-weight: bold;">Last Name</label>
+                                    <input name = 'lname' class="form-control" type="text" placeholder="Last Name">
+                                    <p id="lnameErrMsg" class="error-message"></p>
+                                </div>
+                                <div class="col-4">
+                                    <label style="font-weight: bold;">Age</label>
+                                    <input name = 'age' class="form-control" type="age" placeholder="18-100">
+                                    <!-- <p id="nameErrMsg" class="error-message"></p> -->
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="col-7">
+                                    <label style="font-weight: bold;">Mobile Number</label>
+                                    <input name = 'number' class="form-control" type="number" placeholder="xxxxx xxxxx">
+                                    <p name = 'numbererror'></p>
+                                </div>
+                                <div class="col-7">
+                                    <label style="font-weight: bold;">Email</label>
+                                    <input name = 'email' class="form-control" type="email" placeholder="abc@gmail.com" >
+                                    <p name = 'emailerror'></p>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <label style="font-weight: bold;">Description</label>
+                                <textarea name = 'textarea' class="form-control"  row="8"></textarea>
+                                <p name = 'textareaerror'></p>
+                                <p class="text-right"  >Max 150 characters</p>
+                            </div>
+                            <div class="d-flex input-icons">
+                                <div class="col-7">
+                                    <label style="font-weight: bold;">Password</label>
+                                    <input name = 'pwd' type="password" name="password" autocomplete="current-password" class="form-control">
+                                    <i class="fa fa-eye icon1"></i>
+                                    <p name = 'pwderror'></p>
+                                </div>
+                                <div class="col-7">
+                                    <label style="font-weight: bold;">Confirm Password</label>
+                                    <i class="fa fa-eye icon"></i>
+                                    <input name = 'pwd2' class="form-control" type="password"/> 
+                                    <p name = 'pwd2error'></p>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-5 buttons">
+                                <button style="background-color:transparent;width:110px;height:36px;font-family:lato bold;" class=" button mr-4">Reset</button>
+                                <input type="submit" style="background-color: #4c3e79;width:110px;height:36px;" class="button" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

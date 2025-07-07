@@ -1,0 +1,273 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>medical</title>
+        <link rel="icon" href="{% static 'main/img/favicon.png' %}">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+        <!-- animate CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/animate.css' %}">
+        <!-- owl carousel CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+        <!-- themify CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/themify-icons.css' %}">
+        <!-- flaticon CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/flaticon.css' %}">
+        <!-- magnific popup CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/magnific-popup.css' %}">
+        <!-- nice select CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/nice-select.css' %}">
+        <!-- swiper CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/slick.css' %}">
+        <!-- style CSS -->
+        <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+        {% comment %} Sweetalert {% endcomment %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!--navbar-->
+            
+            <link rel="stylesheet" 
+                href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+                integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+                crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
+                integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" 
+                crossorigin="anonymous"></script>
+            <link rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+                integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+                crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+                crossorigin="anonymous"></script>
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+        <!---nabvar-->
+    
+    </head>
+    <script>
+        function myFunction() {
+        alert("Your Vote was Successfully Submited");
+        }
+    </script>
+    <style>
+        .otp-input-wrapper {
+            width: 240px;
+            text-align: left;
+            display: inline-block;
+          }
+          .otp-input-wrapper input {
+            padding: 0;
+            width: 264px;
+            font-size: 32px;
+            font-weight: 600;
+            color: #3e3e3e;
+            background-color: transparent;
+            border: 0;
+            margin-left: 12px;
+            letter-spacing: 48px;
+            font-family: sans-serif !important;
+          }
+          .otp-input-wrapper input:focus {
+            box-shadow: none;
+            outline: none;
+          }
+          .otp-input-wrapper svg {
+            position: relative;
+            display: block;
+            width: 240px;
+            height: 2px;
+          }
+          
+    </style>
+    <body>
+        <style>
+            .form-control{
+                box-shadow: 1px 0px 8px 0px rgb(161, 190, 190);
+            }
+        </style>
+        <!--::header part start::-->
+        <header class="main_menu home_menu">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="{% url 'home' %}"> <img src="{% static 'main/img/2473087.png' %}" alt="logo" style='width:40px; font-family:Times New Roman, Times, serif !important'> Depression Detection</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                                id="navbarSupportedContent">
+                                <ul class="navbar-nav align-items-center">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{% url 'home' %}" style="font-size:17px;">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'login' %}" style="font-size:17px;">User</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'admin' %}" style="font-size:17px;">Admin</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header part end-->
+        <form method='post' enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class="col-4 card d-flex flex-column justify-content-start card-container m-auto" style="height: 300px;box-shadow: 1px 0px 8px 0px rgb(55, 83, 83); margin-top:120px !important; margin-bottom:50px !important;">
+                <div class="card-body align-items-center text-center"><br>
+                    <div class="otp-input-wrapper">
+                        <h6 class="font-weight-bold">OTP has sent to Your Registered Mobile Number</h6>
+                        <input type="text" name = 'otp'>
+                        <svg viewBox="0 0 240 1" xmlns="http://www.w3.org/2000/svg">
+                          <line x1="0" y1="0" x2="240" y2="0" stroke="#3e3e3e" stroke-width="2" stroke-dasharray="44,22" />
+                        </svg><br><br>
+                      </div>
+                      <input type="submit" value="Submit" class="btn btn-primary d-flex m-auto">
+                </div>
+            </div>
+        </form>
+        
+          
+        <!-- footer part start-->   
+    <footer class="footer-area">
+        <div class="footer section_padding">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-6 col-md-4 col-sm-6 single-footer-widget">
+                        <h2>Address</h2>
+                        <p style="color: black; font-size: 16px; font-weight: 400;">
+                            #16-1-486, Saidabad Rd, DBR Enclave, Sapota Bagh, New Malakpet, Hyderabad, Telangana 500059
+                        </p>
+                        
+                        <div class="social_logo">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"> <i class="ti-twitter"></i> </a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                            <a href="#"><i class="ti-skype"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6 col-md-4 single-footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'login' %}">User</a></li>
+                            <li><a href="{% url 'admin' %}">Admin</a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="copyright_part">
+            <div class="container">
+                <div class="row align-items-center">
+                    <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="ti-heart" style="color:red;" aria-hidden="true"></i> by <a href="https://matrusri.edu.in/" target="_blank">Matrusri</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                    <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"> <i class="ti-twitter"></i> </a>
+                        <a href="#"><i class="ti-instagram"></i></a>
+                        <a href="#"><i class="ti-skype"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+    
+    <!-- footer part end-->
+    
+        <script type="text/javascript" src="{% static 'admin/js/jquery/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'admin/js/jquery-ui/jquery-ui.min.js' %} "></script>
+        <script type="text/javascript" src="{% static 'admin/js/popper.js/popper.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'admin/js/bootstrap/js/bootstrap.min.js' %} "></script>
+        <script type="text/javascript" src="{% static 'admin/pages/widget/excanvas.js' %} "></script>
+        <!-- waves js -->
+        <script src="{% static 'admin/pages/waves/js/waves.min.js' %}"></script>
+        <!-- jquery slimscroll js -->
+        <script type="text/javascript" src="{% static 'admin/js/jquery-slimscroll/jquery.slimscroll.js' %} "></script>
+        <!-- modernizr js -->
+        <script type="text/javascript" src="{% static 'admin/js/modernizr/modernizr.js' %} "></script>
+        <!-- slimscroll js -->
+        <script type="text/javascript" src="{% static 'admin/js/SmoothScroll.js' %}"></script>
+        <script src="{% static 'admin/js/jquery.mCustomScrollbar.concat.min.js' %} "></script>
+        <!-- Chart js -->
+        <script type="text/javascript" src="{% static 'admin/js/chart.js/Chart.js' %}"></script>
+        <!-- amchart js -->
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="{% static 'admin/pages/widget/amchart/gauge.js' %}"></script>
+        <script src="{% static 'admin/pages/widget/amchart/serial.js' %}"></script>
+        <script src="{% static 'admin/pages/widget/amchart/light.js' %}"></script>
+        <script src="{% static 'admin/pages/widget/amchart/pie.min.js' %}"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <!-- menu js -->
+        <script src="{% static 'admin/js/pcoded.min.js' %}"></script>
+        <script src="{% static 'admin/js/vertical-layout.min.js' %} "></script>
+        <!-- custom js --> 
+        <script type="text/javascript" src="{% static 'admin/pages/dashboard/custom-dashboard.js' %}"></script>
+        <script type="text/javascript" src="{% static 'admin/js/script.js' %} "></script>
+        
+        
+        {% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <script>swal({
+                        title: "Success!",
+                        text: "{{message}}",
+                        icon: "success",
+                        button: "OK",
+                    });
+                </script>
+            
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                <script>swal({
+                        title: "Warning :)",
+                        text: "{{message}}",
+                        icon: "warning",
+                        button: "OK",
+                    
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                <script>swal({
+                        title: "info :)",
+                        text: "{{message}}",
+                        icon: "info",
+                        button: "OK",
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <script>swal({
+                        title: "error :)",
+                        text: "{{message}}",
+                        icon: "error",
+                        button: "OK",
+                    });
+                </script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </body>
+
+</html>

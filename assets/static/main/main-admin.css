@@ -1,0 +1,9 @@
+
+.card{
+    margin-left: 190%;
+    margin-bottom: 40px;
+    box-shadow: 1px 0px 10px 0px rgba(15, 15, 15, 0.9);
+}
+.form-control{
+    box-shadow: 1px 0px 10px 0px rgba(175, 240, 231, 0.9);
+}
